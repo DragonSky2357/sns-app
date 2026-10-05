@@ -23,6 +23,8 @@ jib {
         image = "springboot-sns:latest"
     }
     container {
+        mainClass = "com.apiece.springboot_sns_sample.SpringbootSnsSampleApplication"
+
         ports = listOf("8080")
         // non-root 실행
         user = "1000:1000"

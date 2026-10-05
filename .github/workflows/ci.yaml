@@ -38,8 +38,7 @@ jobs:
           ./gradlew jib \
             -Djib.to.image="${{ env.IMAGE }}:${{ steps.meta.outputs.version }}" \
             -Djib.to.auth.username="${{ github.actor }}" \
-            -Djib.to.auth.password="${{ secrets.GITHUB_TOKEN }}" \
-            -Djib.container.mainClass="com.apiece.springboot_sns_sample.SpringbootSnsSampleApplication"
+            -Djib.to.auth.password="${{ secrets.GITHUB_TOKEN }}"
 
   update-manifest:
     needs: build
