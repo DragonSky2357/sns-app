@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE: ghcr.io/apieceofcoding/sns-app
+  IMAGE: ghcr.io/DragonSky2357/sns-app
 
 jobs:
   build:
@@ -46,7 +46,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: apieceofcoding/sns-devops
+          repository: DragonSky2357/sns-devops
           token: ${{ secrets.DEVOPS_TOKEN }}
 
       - name: Update image tag
